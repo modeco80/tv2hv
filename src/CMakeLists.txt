@@ -1,5 +1,9 @@
 add_executable(tv2hv
 
+
+	# utility code
+	utils/error.cpp
+
 	main.cpp
 )
 

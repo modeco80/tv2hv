@@ -2,7 +2,7 @@ function(tv2hv_target target)
 	target_compile_definitions(${target} PRIVATE "$<$<CONFIG:DEBUG>:TV2HV_DEBUG>")
 	#target_include_directories(${target} PRIVATE ${PROJECT_SOURCE_DIR})
 	target_compile_features(${target} PRIVATE cxx_std_23)
-	target_include_directories(${target} PRIVATE ${PROJECT_SOURCE_DIR}/src/lib ${CMAKE_CURRENT_BINARY_DIR})
+	target_include_directories(${target} PRIVATE ${PROJECT_SOURCE_DIR}/src ${CMAKE_CURRENT_BINARY_DIR})
 endfunction()
 
 function(_tv2hv_set_alternate_linker)
