@@ -1,5 +1,5 @@
-#include <utils/types.hpp>
 #include <utils/error.hpp>
+#include <utils/types.hpp>
 
 namespace kvm {
 
@@ -8,12 +8,12 @@ namespace kvm {
 	class VM {
 		/// The primary vCPU.
 		util::Ref<CPU> vcpu;
-	public:
 
+	   public:
 		/// Creates a new VM instance.
 		static util::ErrorOr<util::Ref<VM>> create();
 
 		// TODO: more stuff
 	};
 
-}
+} // namespace kvm

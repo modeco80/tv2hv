@@ -8,9 +8,9 @@ namespace util {
 	}
 
 	Error Error::systemError() {
-		char errBuffer[128]{};
+		char errBuffer[128] {};
 		auto* pStr = strerror_r(errno, &errBuffer[0], sizeof(errBuffer));
 		return Error::format("System error: {}", std::string_view(pStr));
 	}
 
-}
+} // namespace util

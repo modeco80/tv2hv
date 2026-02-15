@@ -1,11 +1,10 @@
 //! Core types and includes
 #pragma once
 
+#include <base/assert.hpp>
 #include <cstdint>
 #include <memory>
 #include <span>
-
-#include <base/assert.hpp>
 
 // these are in the global namespace since most libraries
 // won't try defining anything like this in the global namespace
@@ -56,4 +55,4 @@ namespace util {
 	template <class T, auto Free = std::free>
 	using CUnique = Unique<T, UniqueCDeleter<T, Free>>;
 
-} // namespace base
+} // namespace util
